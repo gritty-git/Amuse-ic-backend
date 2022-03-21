@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-
+var cors = require('cors')
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -17,7 +17,7 @@ const authRouter = require('./routes/auth');
 const fileDataRouter = require('./routes/filedata');
 
 const app = express();
-
+app.use(cors()) 
 // <MsalInitSnippet>
 // In-memory storage of logged-in users
 // For demo purposes only, production apps should store
