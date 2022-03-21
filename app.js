@@ -6,7 +6,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const session = require('express-session');
+var session = require('cookie-session');
 const flash = require('connect-flash');
 const msal = require('@azure/msal-node');
 require('dotenv').config();
