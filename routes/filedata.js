@@ -3,10 +3,14 @@ const graph = require('../graph.js');
 
 router.get('/',
   async function(req, res, next) {
+    console.log(req.session);
     if (!req.session.userId) {
       // Redirect unauthenticated requests to home page
+      //console.log(req);
       res.redirect('/')
     } else {
+      //console.log("ID is: ")
+      //console.log(req.session.userId);
       const params = {
         active: { drive: true }
       };
